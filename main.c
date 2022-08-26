@@ -35,12 +35,10 @@ int main(){
         palavraAmostrar[i]='-';
     }
 
-    printf("%s\n",palavra);
-
     printf("Insira a letra\n");
     while(1)
     {   //pede letra e mete em lower
-
+        printf("%s\n",letrasJaUsadas);
         bool falso=true; //assumo que todas as letras nao sao iguais
         for(i=0;i<tam;i++)
         printf("%c",palavraAmostrar[i]);
@@ -65,11 +63,15 @@ int main(){
                 printf("%c",palavraAmostrar[i]);
                 printf("\n Letra ja verificada, insira outra: ");
                 scanf("%c",&letra);
+                if(verifica(letra)==false)
+                {
+                    letrasJaUsadas[contLetrasUsadas]=letra;
+                }
                 fflush(stdin);
                 system("cls");
             }
         }
-        //verifica se a letra estÃ¡ na palavra
+        //verifica se a letra está na palavra
         for(i=0;i<tam;i++)
         {
             if(letra==palavra[i])
@@ -79,7 +81,7 @@ int main(){
                 contVitoria++;
             }
         }
-        //Se nÃ£o houver letra igual
+        //Se não houver letra igual
         if(falso)
         {
             chances--;

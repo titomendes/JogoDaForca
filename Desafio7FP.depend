@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1661531661 source:c:\users\tito_\onedrive\documentos\codeblocks workspace\desafio7fp\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<stdbool.h>
+	<ctype.h>
+
